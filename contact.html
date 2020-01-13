@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>contact</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a href="index.html">
+                    <img src="styles/Middel%206.png" alt="home button">
+            </a>
+            <ul>
+                <li><a href="">
+                    About</a>
+                </li>
+                <li><a href="">
+                    Resume</a>
+                </li>
+                <li>
+                    <a href="contact.html">
+                    Contact</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <form action="verzonden.html">
+            <fieldset>
+                <legend>Contact</legend>
+                <label for="voornaam">Name</label>
+                <input type="text" name="voornaam" id="voornaam" required>
+
+                <label for="achternaam">Surname</label>
+                <input type="text" name="achternaam" id="achternaam" required>
+
+                <label for="email">E-mail</label>
+                <input type="email" name="emailadres" id="email" required>
+
+                <label for="gender">Gender</label>
+                <select name="gender" id="gender">
+                    <option value="vrouw">Male</option>
+                    <option value="man">Female</option>
+                    <option value="anders">This is a very personal question</option>
+                </select>
+
+                <label for="bericht">Message</label>
+
+                <textarea id="bericht" name="message" required>
+                </textarea>
+
+                <input type="submit" value="Submit">
+            </fieldset>
+        </form>
+    </main>
+
+
+</body>
+
+</html>

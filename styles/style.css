@@ -1,0 +1,392 @@
+/******************algemeen****************/
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: #99ccff;
+}
+
+/****************NAVIGATIE*****************/
+
+header {
+    padding: 2em 2em 2em 1em;
+}
+
+a {
+    text-decoration: none;
+}
+
+nav img {
+    width: 3.5em;
+}
+
+nav {
+    display: flex;
+}
+
+ul {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+}
+
+li a {
+    font-family: 'Raleway', sans-serif;
+    font-size: 0.9em;
+    color: mediumblue;
+}
+
+li {
+    list-style: none;
+    padding: 0.6em 3.5vw;
+}
+
+li a:hover {
+    text-shadow: 2em 2em #ff80ff;
+    color: #99ccff;
+    font-weight: 800;
+}
+
+li:last-child {
+    font-weight: 700;
+}
+
+/************vanaf 40 em responsive navigatie***********/
+
+@media (min-width: 40em) {
+    li a {
+        text-shadow: 0.1em 0.2em #ffccff;
+    }
+}
+
+/***********articles homepage***********/
+
+h1 {
+    color: #ffffff;
+    text-shadow: 0.07em 0.07em #ff80ff;
+    font-family: 'Raleway', sans-serif;
+    text-align: center;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    margin: 6em 0em;
+}
+
+/***in javascript wordt de class veranderd door op de kat te klikken***/
+#cat {
+    color: #ffffff;
+    text-shadow: 0.3em 0.4em #ff80ff;
+    margin-left: 48%;
+    margin-bottom: 10%;
+    font-size: 0.5em;
+}
+
+h3 {
+    color: #ffffff;
+    text-shadow: 0.1em 0.1em #ff80ff;
+    font-family: 'Raleway', sans-serif;
+    text-align: center;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+/**text te voorschijn laten komen met js**/
+h3.text {
+    opacity: 1;
+    transition: 0.5s;
+}
+
+/**articles voor het tentoonstellen portfolio werk**/
+
+article {
+    background: #ffccff;
+    padding: 4em 1em;
+    border-bottom: 1em #99ccff dashed;
+    min-height: 44em;
+    transition: 3s;
+}
+
+article:hover{
+    transform: rotate(25deg);
+}
+
+article img {
+    object-fit: cover;
+    width: 100%;
+    height: 2.8em;
+    min-height: 10em;
+}
+
+article img:hover{
+    filter: blur(0.2em);
+}
+
+/******vanaf 40 em responsive article. zodat de onderkanten gelijk zijn van de articles****/
+@media (min-width: 60em) {
+    article {
+        min-height: 49em;
+    }
+}
+
+/*********vanaf 40 em responsive voor de articles/sections van de homepage*********/
+
+@media (min-width: 40em) {
+    section {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 1em;
+    }
+}
+
+/*******vanaf 70 em responsive voor de articles/sections van de homepage**********/
+
+@media (min-width: 70em) {
+    section {
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr;
+        column-gap: 1em;
+    }
+}
+
+/*titels in articles*/
+h2 {
+    color: #ff80ff;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 8em;
+    line-height: 0.8em;
+    margin: 0em;
+    text-shadow: none;
+}
+
+h2:hover{
+    color: #ffccff;
+    text-shadow: 0.05em 0.05em #ff80ff;
+}
+
+p,
+footer {
+    font-family: 'Raleway', sans-serif;
+    font-size: 1em;
+    color: #00a5ff;
+}
+
+footer {
+    font-style: italic;
+}
+
+/*******DETAILPAGINA HAVEN-STAD*********/
+
+/***article aanpassingen ten opzichte van de homepage articles**/
+
+.detail{
+    background-color: #ffccff;
+}
+
+.detailhaven{
+    border: none;
+    background: none;
+}
+
+.detailhaven:hover{
+    transform: rotate(0deg);
+}
+/**aanpassingen images**/
+.detailhaven img{
+    height: auto;
+}
+
+.detailhaven img:hover{
+    filter: blur(0);
+}
+
+/*hier kom ik niet uit, op de een of andere manier lukt het niet om het grid toe te passen op de detailpagina. Omdat het een section is(zoals op index opagina) dacht ik dat hij hem direct zou pakken. Nu heb ik ook geprobeerd section een class te geven maar hij doet het nog niet*/
+/*
+@media (min-width: 40em) {
+    .grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 1em;
+    }
+}
+*/
+
+/**aanpassingen van de tekst***/
+/**bron sticky: https://css-tricks.com/almanac/properties/p/position/**/
+.detail h1{
+    position: -webkit-sticky;
+    position: sticky; top: 0em;
+    font-size: 2.3em;
+    margin: 0;
+}
+
+h4 {
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.8em;
+    font-weight: 500;
+    color: yellow;
+    filter: blur(0.04em);
+    text-align: center;
+    margin-top: 0;
+}
+
+h4:hover{
+    filter: blur(0em);
+}
+
+/****p aangepast naar de detailpagina****/
+.para{
+    max-width: 80%;
+    text-align: justify;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 1.2em;
+}
+
+/*****paragraaf responsive vanaf 40em****/
+@media (min-width: 40em){
+    .para{
+        max-width: 60%;
+}
+}
+/*****paragraaf responsive vanaf 60em****/
+@media (min-width: 60em){
+    .para{
+        max-width: 50%;
+}
+}
+
+/********************FORMULIER*********************/
+
+form {
+    font-family: 'Raleway', sans-serif;
+    font-size: 1em;
+    color: mediumblue;
+    max-width: 30em;
+    margin: auto;
+}
+
+legend {
+    margin-bottom: 1em;
+    font-size: 2.5em;
+    font-weight: 700;
+    color: #ffffff;
+    text-shadow: 0.07em 0.07em #ff80ff;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    text-align: center;
+    text-decoration: underline;
+    text-decoration-style: wavy;
+}
+
+fieldset {
+    background-color: #ffccff;
+    border: none;
+    border-radius: 2em;
+    box-shadow: 0.4em 0.3em white;
+}
+
+label {
+    float: left;
+    text-align: right;
+    margin-right: 15px;
+    width: 100px;
+}
+
+label:first-of-type {
+    text-decoration: underline;
+    text-decoration-style: wavy;
+}
+
+input,
+select,
+textarea {
+    font-family: 'Raleway', sans-serif;
+    border-radius: 0.5em;
+    width: 26em;
+    margin-bottom: 1.8em;
+    height: 3em;
+    background: #fff2ff;
+}
+
+textarea {
+    height: 10em;
+}
+
+/*********PSEUDO CLASSES INPUT FORM*******/
+
+input[type=text]:focus,
+input[type=email]:focus,
+textarea:focus {
+    transition: 1s;
+    width: 26.5em;
+    border: 0.15em solid mediumblue;
+    box-shadow: 0.3em 0.3em #ff80ff;
+}
+
+input[type=text]:valid,
+input[type=email]:valid,
+textarea:valid {
+    border: 0.3em solid #ff80ff;
+    box-shadow: 0.3em 0.3em mediumblue;
+}
+
+/*********SUBMIT form*******/
+
+input[type=submit] {
+    font-size: 1em;
+    font-weight: 700;
+    color: #fff;
+    background-color: mediumblue;
+    width: 19em;
+    box-shadow: 0.1em 0.2em #ffffff;
+    margin-left: 7em;
+    transition: 1s;
+}
+
+input[type=submit]:hover {
+    transition: 0.5s;
+    color: mediumblue;
+    background: #ffffff;
+    box-shadow: 0.1em 0.1em mediumblue;
+}
+
+input[type=submit]:active {
+    color: mediumblue;
+    background: #ff80ff;
+    box-shadow: 0.1em 0.1em mediumblue;
+}
+
+/*************SUBMIT PAGINA***********/
+/*****bron https://www.youtube.com/watch?time_continue=4&v=vJNVramny9k&feature=emb_title ***/
+/* hier ben ik niet uitgekomen in mijn javascript, dit is bedoeld voor de "verzonden" pagina na het invullen van het formulier*/
+/*
+#logo{
+    margin-top: 15em;
+    max-height: 10em;
+}
+
+#logo path:nth-of-type(1){
+    stroke-dasharray: px;
+    stroke-dashoffset:
+}
+
+#logo path:nth-of-type(2){
+
+}
+
+#logo path:nth-of-type(3){
+
+}
+
+#logo path:nth-of-type(4){
+
+}
+
+#logo path:nth-of-type(5){
+
+}
+*/
